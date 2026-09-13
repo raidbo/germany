@@ -2237,3 +2237,22 @@ MOBILE
 
 
 @media screen and (max-width: 600px) { #state-navigation { display: flex; flex-direction: column; gap: 10px; } #state-navigation .state-nav-button { width: 100%; box-sizing: border-box; text-align: center; } }
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .country-info th,
+    .country-info td {
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+}
