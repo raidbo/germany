@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kontakt | Deutschland entdecken</title>
+
+<meta name="description" content="Kontaktieren Sie Deutschland entdecken. Senden Sie uns Ihre Fragen, Anmerkungen oder Hinweise.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#1f3a5f">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<meta property="og:title" content="Kontakt | Deutschland entdecken">
+<meta property="og:description" content="Kontaktieren Sie Deutschland entdecken und senden Sie uns Ihre Fragen, Anmerkungen oder Hinweise.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Deutschland entdecken">
+<meta property="og:locale" content="de_DE">
+<link rel="canonical" href="https://DEINE-DOMAIN.de/contact.html">
+
+<link rel="alternate" hreflang="de"
+      href="https://DEINE-DOMAIN.de/contact.html">
+
+<link rel="alternate" hreflang="en"
+      href="https://DEINE-DOMAIN.de/contact-en.html">
+
+<link rel="alternate" hreflang="x-default"
+      href="https://DEINE-DOMAIN.de/contact.html">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-content">
+
+
+    <div class="site-title">
+        <h1>Deutschland entdecken</h1>
+        <span>Kontakt</span>
+    </div>
+
+    <nav class="header-nav">
+        <a href="index.html" class="language-button">
+            Home
+        </a>
+
+        <a href="contact-en.html" class="language-button">
+            English
+        </a>
+    </nav>
+
+</div>
+
+<div class="top-ad">
+    Werbung
+</div>
+
+</header>
+
+
+<main class="about-page">
+
+<section class="about-section">
+
+
+<h2>Kontakt</h2>
+
+<p>
+    Haben Sie eine Frage, einen Hinweis oder eine Anmerkung zu unserer Website?
+    Sie können uns gerne kontaktieren.
+</p>
+
+<p>
+    Wenn Sie direkt per E-Mail Kontakt aufnehmen möchten, erreichen Sie uns unter:
+</p>
+
+<p class="contact-email">
+    <a href="mailto:r20992683@gmail.com">r20992683@gmail.com</a>
+    <button type="button" class="copy-email" onclick="copyEmail()">
+        Kopieren
+    </button>
+</p>
+
+<script>
+function copyEmail() {
+    navigator.clipboard.writeText("r20992683@gmail.com");
+    
+    const button = document.querySelector(".copy-email");
+    button.textContent = "Kopiert!";
+    
+    setTimeout(() => {
+        button.textContent = "Kopieren";
+    }, 1500);
+}
+</script>
+
+
+<h2>Kontaktformular</h2>
+
+<p>
+    Sie können uns auch über das folgende Formular eine Nachricht senden.
+    Die Angabe Ihrer E-Mail-Adresse ist freiwillig. Wenn Sie eine Antwort
+    erhalten möchten, können Sie Ihre E-Mail-Adresse angeben.
+</p>
+
+<form class="contact-form" action="https://formsubmit.co/r20992683@gmail.com" method="POST">
+
+    <input type="hidden" name="_subject" value="Neue Nachricht über Deutschland entdecken">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="form-group">
+        <label for="name">Name (optional)</label>
+        <input type="text" id="name" name="name" placeholder="Ihr Name">
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-Mail-Adresse (optional)</label>
+        <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse">
+    </div>
+
+    <div class="form-group">
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" rows="7" placeholder="Schreiben Sie Ihre Nachricht hier..." required></textarea>
+    </div>
+
+    <button type="submit">Nachricht senden</button>
+
+</form>
+
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+
+<div class="footer-ad">
+    Werbung
+</div>
+
+<nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">Über uns</a>
+    <a href="terms.html">Nutzungsbedingungen</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="report-error.html">Fehler melden</a>
+    <a href="privacy-policy.html">Datenschutz</a>
+</nav>
+
+<p class="copyright">
+    © 2026 Deutschland entdecken. Alle Rechte vorbehalten.
+</p>
+
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Discover Germany</title>
+
+<meta name="description" content="Contact Discover Germany. Send us your questions, comments or suggestions.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#1f3a5f">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<meta property="og:title" content="Contact | Discover Germany">
+<meta property="og:description" content="Contact Discover Germany and send us your questions, comments or suggestions.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Discover Germany">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://DEINE-DOMAIN.de/contact-en.html">
+
+<link rel="alternate" hreflang="de"
+      href="https://DEINE-DOMAIN.de/contact.html">
+
+<link rel="alternate" hreflang="en"
+      href="https://DEINE-DOMAIN.de/contact-en.html">
+
+<link rel="alternate" hreflang="x-default"
+      href="https://DEINE-DOMAIN.de/contact.html">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-content">
+
+
+<div class="site-title">
+    <h1>Discover Germany</h1>
+    <span>Contact</span>
+</div>
+
+<nav class="header-nav">
+    <a href="index-en.html" class="language-button">
+        Home
+    </a>
+
+    <a href="contact.html" class="language-button">
+        Deutsch
+    </a>
+</nav>
+
+
+</div>
+
+<div class="top-ad">
+    Advertisement
+</div>
+
+</header>
+
+<main class="about-page">
+
+<section class="about-section">
+
+<h2>Contact</h2>
+
+<p>
+    Do you have a question, suggestion or comment about our website?
+    You are welcome to contact us.
+</p>
+
+<p>
+    If you would like to contact us directly by email, you can reach us at:
+</p>
+
+<p class="contact-email">
+    <a href="mailto:r20992683@gmail.com">r20992683@gmail.com</a>
+    <button type="button" class="copy-email" onclick="copyEmail()">
+        Copy
+    </button>
+</p>
+
+<script>
+function copyEmail() {
+    navigator.clipboard.writeText("r20992683@gmail.com");
+    
+    const button = document.querySelector(".copy-email");
+    button.textContent = "Copied!";
+    
+    setTimeout(() => {
+        button.textContent = "Copy";
+    }, 1500);
+}
+</script>
+
+<h2>Contact Form</h2>
+
+<p>
+    You can also send us a message using the following form.
+    Providing your email address is optional. If you would like to receive
+    a reply, you can enter your email address.
+</p>
+
+<form class="contact-form" action="https://formsubmit.co/r20992683@gmail.com" method="POST">
+
+
+<input type="hidden" name="_subject" value="New message via Discover Germany">
+<input type="hidden" name="_captcha" value="false">
+
+<div class="form-group">
+    <label for="name">Name (optional)</label>
+    <input type="text" id="name" name="name" placeholder="Your name">
+</div>
+
+<div class="form-group">
+    <label for="email">Email address (optional)</label>
+    <input type="email" id="email" name="email" placeholder="Your email address">
+</div>
+
+<div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="7" placeholder="Write your message here..." required></textarea>
+</div>
+
+<button type="submit">Send message</button>
+
+
+</form>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+<div class="footer-ad">
+    Advertisement
+</div>
+
+<nav class="footer-links">
+    <a href="index-en.html">Home</a>
+    <a href="about-en.html">About Us</a>
+    <a href="terms-en.html">Terms of Use</a>
+    <a href="contact-en.html">Contact</a>
+    <a href="report-error-en.html">Report an Error</a>
+    <a href="privacy-policy-en.html">Privacy Policy</a>
+</nav>
+
+<p class="copyright">
+    © 2026 Discover Germany. All rights reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
