@@ -1,19 +1,4 @@
-function toggleNotice() {
-    const notice = document.getElementById("aiNotice");
-    const content = notice.querySelector(".ai-notice-content");
-    const icon = notice.querySelector(".ai-notice-icon");
-    const button = notice.querySelector(".ai-notice-toggle");
 
-    if (content.style.display === "none") {
-        content.style.display = "";
-        icon.style.display = "";
-        button.textContent = "−";
-    } else {
-        content.style.display = "none";
-        icon.style.display = "none";
-        button.textContent = "+";
-    }
-}
 
 
 
