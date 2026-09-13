@@ -115,215 +115,271 @@ function copyInfo(event, button) {
 
 
 
-/* =========================
-NAVIGATION BETWEEN STATES
-========================= */
-/* =========================
-NAVIGATION BETWEEN STATES
-German + English
-========================= */
-
-document.addEventListener("DOMContentLoaded", function () {
 
 
-const navigation = document.getElementById("state-navigation");
+/* =========================================
+   NAVIGATION BETWEEN STATES
+   German + English
+========================================= */
 
-if (!navigation) return;
+function buildStateNavigation() {
 
-const states = [
-    {
-        nameDE: "Baden-Württemberg",
-        nameEN: "Baden-Württemberg",
-        fileDE: "baden-wuerttemberg.html",
-        fileEN: "baden-wuerttemberg-en.html"
-    },
-    {
-        nameDE: "Bayern",
-        nameEN: "Bavaria",
-        fileDE: "bayern.html",
-        fileEN: "bayern-en.html"
-    },
-    {
-        nameDE: "Berlin",
-        nameEN: "Berlin",
-        fileDE: "berlin.html",
-        fileEN: "berlin-en.html"
-    },
-    {
-        nameDE: "Brandenburg",
-        nameEN: "Brandenburg",
-        fileDE: "brandenburg.html",
-        fileEN: "brandenburg-en.html"
-    },
-    {
-        nameDE: "Bremen",
-        nameEN: "Bremen",
-        fileDE: "bremen.html",
-        fileEN: "bremen-en.html"
-    },
-    {
-        nameDE: "Hamburg",
-        nameEN: "Hamburg",
-        fileDE: "hamburg.html",
-        fileEN: "hamburg-en.html"
-    },
-    {
-        nameDE: "Hessen",
-        nameEN: "Hesse",
-        fileDE: "hessen.html",
-        fileEN: "hessen-en.html"
-    },
-    {
-        nameDE: "Mecklenburg-Vorpommern",
-        nameEN: "Mecklenburg-Western Pomerania",
-        fileDE: "mecklenburg-vorpommern.html",
-        fileEN: "mecklenburg-vorpommern-en.html"
-    },
-    {
-        nameDE: "Niedersachsen",
-        nameEN: "Lower Saxony",
-        fileDE: "niedersachsen.html",
-        fileEN: "niedersachsen-en.html"
-    },
-    {
-        nameDE: "Nordrhein-Westfalen",
-        nameEN: "North Rhine-Westphalia",
-        fileDE: "nordrhein-westfalen.html",
-        fileEN: "nordrhein-westfalen-en.html"
-    },
-    {
-        nameDE: "Rheinland-Pfalz",
-        nameEN: "Rhineland-Palatinate",
-        fileDE: "rheinland-pfalz.html",
-        fileEN: "rheinland-pfalz-en.html"
-    },
-    {
-        nameDE: "Saarland",
-        nameEN: "Saarland",
-        fileDE: "saarland.html",
-        fileEN: "saarland-en.html"
-    },
-    {
-        nameDE: "Sachsen",
-        nameEN: "Saxony",
-        fileDE: "sachsen.html",
-        fileEN: "sachsen-en.html"
-    },
-    {
-        nameDE: "Sachsen-Anhalt",
-        nameEN: "Saxony-Anhalt",
-        fileDE: "sachsen-anhalt.html",
-        fileEN: "sachsen-anhalt-en.html"
-    },
-    {
-        nameDE: "Schleswig-Holstein",
-        nameEN: "Schleswig-Holstein",
-        fileDE: "schleswig-holstein.html",
-        fileEN: "schleswig-holstein-en.html"
-    },
-    {
-        nameDE: "Thüringen",
-        nameEN: "Thuringia",
-        fileDE: "thueringen.html",
-        fileEN: "thueringen-en.html"
+    const navigation = document.getElementById("state-navigation");
+
+    if (!navigation) return;
+
+    const states = [
+        {
+            nameDE: "Baden-Württemberg",
+            nameEN: "Baden-Württemberg",
+            fileDE: "baden-wuerttemberg.html",
+            fileEN: "baden-wuerttemberg-en.html"
+        },
+        {
+            nameDE: "Bayern",
+            nameEN: "Bavaria",
+            fileDE: "bayern.html",
+            fileEN: "bayern-en.html"
+        },
+        {
+            nameDE: "Berlin",
+            nameEN: "Berlin",
+            fileDE: "berlin.html",
+            fileEN: "berlin-en.html"
+        },
+        {
+            nameDE: "Brandenburg",
+            nameEN: "Brandenburg",
+            fileDE: "brandenburg.html",
+            fileEN: "brandenburg-en.html"
+        },
+        {
+            nameDE: "Bremen",
+            nameEN: "Bremen",
+            fileDE: "bremen.html",
+            fileEN: "bremen-en.html"
+        },
+        {
+            nameDE: "Hamburg",
+            nameEN: "Hamburg",
+            fileDE: "hamburg.html",
+            fileEN: "hamburg-en.html"
+        },
+        {
+            nameDE: "Hessen",
+            nameEN: "Hesse",
+            fileDE: "hessen.html",
+            fileEN: "hessen-en.html"
+        },
+        {
+            nameDE: "Mecklenburg-Vorpommern",
+            nameEN: "Mecklenburg-Western Pomerania",
+            fileDE: "mecklenburg-vorpommern.html",
+            fileEN: "mecklenburg-vorpommern-en.html"
+        },
+        {
+            nameDE: "Niedersachsen",
+            nameEN: "Lower Saxony",
+            fileDE: "niedersachsen.html",
+            fileEN: "niedersachsen-en.html"
+        },
+        {
+            nameDE: "Nordrhein-Westfalen",
+            nameEN: "North Rhine-Westphalia",
+            fileDE: "nordrhein-westfalen.html",
+            fileEN: "nordrhein-westfalen-en.html"
+        },
+        {
+            nameDE: "Rheinland-Pfalz",
+            nameEN: "Rhineland-Palatinate",
+            fileDE: "rheinland-pfalz.html",
+            fileEN: "rheinland-pfalz-en.html"
+        },
+        {
+            nameDE: "Saarland",
+            nameEN: "Saarland",
+            fileDE: "saarland.html",
+            fileEN: "saarland-en.html"
+        },
+        {
+            nameDE: "Sachsen",
+            nameEN: "Saxony",
+            fileDE: "sachsen.html",
+            fileEN: "sachsen-en.html"
+        },
+        {
+            nameDE: "Sachsen-Anhalt",
+            nameEN: "Saxony-Anhalt",
+            fileDE: "sachsen-anhalt.html",
+            fileEN: "sachsen-anhalt-en.html"
+        },
+        {
+            nameDE: "Schleswig-Holstein",
+            nameEN: "Schleswig-Holstein",
+            fileDE: "schleswig-holstein.html",
+            fileEN: "schleswig-holstein-en.html"
+        },
+        {
+            nameDE: "Thüringen",
+            nameEN: "Thuringia",
+            fileDE: "thueringen.html",
+            fileEN: "thueringen-en.html"
+        }
+    ];
+
+
+    /* =========================
+       DETECT CURRENT PAGE
+    ========================= */
+
+    let currentFile = window.location.pathname
+        .split("/")
+        .filter(Boolean)
+        .pop() || "index.html";
+
+    currentFile = currentFile.toLowerCase();
+
+
+    /*
+       Falls Cloudflare die Seite ohne .html ausliefert:
+       /hessen/
+       wird zu
+       hessen.html
+    */
+
+    if (!currentFile.includes(".")) {
+        currentFile += ".html";
     }
-];
 
 
-/* =========================
-   DETECT LANGUAGE
-========================= */
+    /* =========================
+       DETECT LANGUAGE
+    ========================= */
 
-const currentFile = window.location.pathname
-    .split("/")
-    .pop()
-    .toLowerCase();
-
-const isEnglish = currentFile.endsWith("-en.html");
+    const isEnglish = currentFile.endsWith("-en.html");
 
 
-/* =========================
-   FIND CURRENT STATE
-========================= */
+    /* =========================
+       FIND CURRENT STATE
+    ========================= */
 
-const currentIndex = states.findIndex(function (state) {
+    const currentIndex = states.findIndex(function (state) {
 
-    if (isEnglish) {
-        return state.fileEN.toLowerCase() === currentFile;
+        if (isEnglish) {
+            return state.fileEN.toLowerCase() === currentFile;
+        }
+
+        return state.fileDE.toLowerCase() === currentFile;
+    });
+
+
+    /*
+       Keine passende Bundesland-Seite gefunden
+    */
+
+    if (currentIndex === -1) {
+        return;
     }
 
-    return state.fileDE.toLowerCase() === currentFile;
-});
 
-if (currentIndex === -1) return;
+    /* =========================
+       CLEAR NAVIGATION
+    ========================= */
+
+    navigation.innerHTML = "";
 
 
-/* =========================
-   PREVIOUS BUTTON
-========================= */
+    /* =========================
+       PREVIOUS BUTTON
+    ========================= */
 
-if (currentIndex > 0) {
+    if (currentIndex > 0) {
 
-    const previous = states[currentIndex - 1];
+        const previous = states[currentIndex - 1];
 
-    const previousLink = document.createElement("a");
+        const previousLink = document.createElement("a");
 
-    previousLink.href = isEnglish
-        ? previous.fileEN
-        : previous.fileDE;
+        previousLink.href = "/" + (
+            isEnglish
+                ? previous.fileEN
+                : previous.fileDE
+        );
 
-    previousLink.className = "state-nav-button previous-state";
+        previousLink.className =
+            "state-nav-button previous-state";
 
-    previousLink.innerHTML = isEnglish
-        ? "← " + previous.nameEN
-        : "← " + previous.nameDE;
+        previousLink.innerHTML = isEnglish
+            ? "← " + previous.nameEN
+            : "← " + previous.nameDE;
 
-    navigation.appendChild(previousLink);
+        navigation.appendChild(previousLink);
+    }
+
+
+    /* =========================
+       HOME BUTTON
+    ========================= */
+
+    const homeLink = document.createElement("a");
+
+    homeLink.href = "/" + (
+        isEnglish
+            ? "index-en.html"
+            : "index.html"
+    );
+
+    homeLink.className =
+        "state-nav-button home-state";
+
+    homeLink.textContent = isEnglish
+        ? "Home"
+        : "Startseite";
+
+    navigation.appendChild(homeLink);
+
+
+    /* =========================
+       NEXT BUTTON
+    ========================= */
+
+    if (currentIndex < states.length - 1) {
+
+        const next = states[currentIndex + 1];
+
+        const nextLink = document.createElement("a");
+
+        nextLink.href = "/" + (
+            isEnglish
+                ? next.fileEN
+                : next.fileDE
+        );
+
+        nextLink.className =
+            "state-nav-button next-state";
+
+        nextLink.innerHTML = isEnglish
+            ? next.nameEN + " →"
+            : next.nameDE + " →";
+
+        navigation.appendChild(nextLink);
+    }
+
 }
 
 
 /* =========================
-   HOME BUTTON
+   START NAVIGATION
 ========================= */
 
-const homeLink = document.createElement("a");
+if (document.readyState === "loading") {
 
-homeLink.href = isEnglish
-    ? "index-en.html"
-    : "index.html";
+    document.addEventListener(
+        "DOMContentLoaded",
+        buildStateNavigation
+    );
 
-homeLink.className = "state-nav-button home-state";
+} else {
 
-homeLink.textContent = isEnglish
-    ? "Home"
-    : "Startseite";
+    buildStateNavigation();
 
-navigation.appendChild(homeLink);
-
-
-/* =========================
-   NEXT BUTTON
-========================= */
-
-if (currentIndex < states.length - 1) {
-
-    const next = states[currentIndex + 1];
-
-    const nextLink = document.createElement("a");
-
-    nextLink.href = isEnglish
-        ? next.fileEN
-        : next.fileDE;
-
-    nextLink.className = "state-nav-button next-state";
-
-    nextLink.innerHTML = isEnglish
-        ? next.nameEN + " →"
-        : next.nameDE + " →";
-
-    navigation.appendChild(nextLink);
 }
-
-
-});
-
