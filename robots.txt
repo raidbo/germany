@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://germany-6ia.pages.dev/sitemap.xml
