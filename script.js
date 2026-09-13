@@ -383,3 +383,31 @@ if (document.readyState === "loading") {
     buildStateNavigation();
 
 }
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const currentFile = window.location.pathname
+        .split("/")
+        .filter(Boolean)
+        .pop()
+        .toLowerCase();
+
+    const languageButtons = document.querySelectorAll(".language-button");
+
+    const isEnglish = currentFile.endsWith("-en.html");
+
+    languageButtons.forEach(function (button) {
+
+        if (
+            (isEnglish && button.dataset.lang === "en") ||
+            (!isEnglish && button.dataset.lang === "de")
+        ) {
+            button.classList.add("active-language");
+        }
+
+    });
+
+});

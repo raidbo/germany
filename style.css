@@ -2256,3 +2256,40 @@ MOBILE
         hyphens: auto !important;
     }
 }
+
+
+
+
+
+
+
+.language-switcher {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.language-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #1f3a5f;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.language-button:hover {
+    background: #f0f3f6;
+    color: #1f3a5f;
+}
+
+.language-button.active-language {
+    background: #ffffff;
+    color: #1f3a5f;
+    font-weight: 700;
+    border-bottom: 3px solid #1f3a5f;
+}
